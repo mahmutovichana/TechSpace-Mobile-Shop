@@ -1,0 +1,129 @@
+.srednji-motion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 110px;
+    position: relative;
+    z-index: 100;
+}
+
+.left-arrow-section {
+    z-index: 20;
+    cursor: pointer;
+    position: absolute;
+    left: 80px;
+    padding: 5px;
+    border-radius: 2.5;
+}
+
+.left-arrow-section:hover,
+.right-arrow-section:hover {
+    background-color: rgba(85, 85, 20, 0.5);
+    border-radius: 35px;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.arrow-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.srednji-motion .active{
+    height: 350px; 
+    width: 750px; 
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.srednji-motion .desno {
+    height: 100px; 
+    width: 300px; 
+    margin-left: -130px;
+    border-radius: 10px;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.srednji-motion .lijevo {
+    height: 100px; 
+    width: 300px; 
+    margin-right: -130px;
+    border-radius: 10px;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    transition: 0.5s;
+}
+
+
+.right-arrow-section {
+    z-index: 20;
+    cursor: pointer;
+    position: absolute;
+    padding: 5px;
+    right: 80px;
+}
+
+#ponuda-prodaje {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+}
+
+.okvir-ponude {
+    height: 400px;
+    background-color: rgb(239, 248, 75);
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-left: 10px;
+    border-radius: 14px;
+    border-color: rgb(11, 7, 7);
+    border-width: 2px;
+    border-style: solid;
+}
+
+.glavna-telefon-slika {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.unutrasnji-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 0px; 
+    height: 70px; 
+    width: 230px; 
+    padding: 10px;
+    margin-left: 3px;
+    margin-top: -20px;
+}
+
+#brojac-posjeta {
+    display: flex;
+    flex-grow: 0;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: 15px;
+    width: 300px;
+}
+
+#brojac-posjeta:hover {
+    background-color: rgba(85, 85, 20, 0.5);
+    border-radius: 35px;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+}

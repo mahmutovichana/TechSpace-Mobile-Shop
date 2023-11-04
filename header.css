@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: #fed84e;
+    margin: 0px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    z-index: 100000;
+
+}

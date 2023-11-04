@@ -1,0 +1,26 @@
+.sidebar {
+    position: fixed;
+    background-color: #fed84e;
+    top: 80px;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    border-right-color: white;
+    border-right-style: solid;
+    border-right-width: 2px;
+}
+
+.sidebar-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    min-width: 100px;
+    margin-top: 10px;
+    border-bottom-color: white;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    cursor: pointer;
+    
+}

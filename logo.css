@@ -1,0 +1,40 @@
+.logo {
+    height: 80px;
+}
+
+.centralni-logo {
+    height: 50px;
+}
+
+.left-section {
+    margin-left: 15px;
+
+}
+
+.center-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin-left: 30px;
+    
+}
+
+.right-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+
+.glavni-naziv {
+    font-family: Roboto, Arial;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0px;
+    margin: 0px;
+    margin-top: -2px;
+}

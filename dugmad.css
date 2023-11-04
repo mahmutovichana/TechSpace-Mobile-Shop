@@ -1,0 +1,37 @@
+.header-button {
+    background-color: transparent;
+    height: 30px;
+    width: 120px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    margin-right: 5px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.dugme-container {
+    position: relative;
+}
+
+
+
+.mala-slika-container {
+    position: absolute;
+    top: 1px;
+    left: 6px;
+}
+
+
+.mala-slika-container1 {
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+
+.mala-slika-container2 {
+    position: absolute;
+    top: 5px;
+    left: 6px;
+}
+
