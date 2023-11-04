@@ -2493,7 +2493,7 @@ address strong, address b {
 
 /*== Testimonial Area Start ==*/
 .testimonial-wrapper {
-    background-image: url("../img/testi_bg.jpg");
+    background-image: url("../img/testi-bg.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -5155,5 +5155,29 @@ fieldset legend {
 .copyright-area .copyright-text * {
     margin: 0;
 }
+.visitCounter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    background-color: rgba(56,57,175);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 5%;
+    padding: 4%;
+}
 
+.visitCounter p {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.visitCounter h1#count {
+    font-size: 36px;
+    margin: 0;
+    color: white;
+}
 /*== Footer Area End ==*/
