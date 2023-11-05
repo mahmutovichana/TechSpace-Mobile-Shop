@@ -36,6 +36,26 @@
 </head>
 <body>
 
+    <script type="text/javascript">
+        function changeLanguage(language) {
+            const targetLanguage = language === 'bs' ? 'bs' : 'en'; 
+            const elements = document.getElementsByClassName('translate');
+
+            for (let i = 0; i < elements.length; i++) {
+                const text = elements[i].innerText;
+                const googleTranslateUrl = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=' + targetLanguage + '&dt=t&q=' + encodeURI(text);
+
+                fetch(googleTranslateUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        const translatedText = data[0][0][0];
+                        elements[i].innerText = translatedText;
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+        }
+    </script>
+
 <!--== Header Area Start ==-->
 <header id="header-area">
     <div class="ruby-container">
@@ -53,10 +73,10 @@
                 <div class="main-menu-wrap">
                     <nav id="mainmenu">
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="assets/pdfs/cjenovnik.pdf" download>Menu</a></li>
-                            <li><a href="assets/pdfs/formularZaPosao.pdf">Join Us</a></li>
+                            <li><a href="index.html" class="translate">Početna stranica</a></li>
+                            <li><a href="#" class="translate">Kupovina</a></li>
+                            <li><a href="assets/pdfs/cjenovnik.pdf" download class="translate">Meni</a></li>
+                            <li><a href="assets/pdfs/formularZaPosao.pdf" class="translate">Pridruži nam se</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -67,8 +87,8 @@
             <div class="col-6 col-lg-2 m-auto">
                 <div class="header-right-meta text-right">
                     <ul>
-                        <a id="bosanski" Language="bosnian"><img src="assets/img/bosnia.png" style="width: 15%;"></a>
-                        <a id="engleski" Language="english" class="active"><img src="assets/img/usa.jpg" style="width: 15%;"></a>
+                        <a id="bosanski" onclick="changeLanguage('bs')"><img src="assets/img/bosnia.png" style="width: 15%;"></a>
+                        <a id="engleski" onclick="changeLanguage('en')" class="active"><img src="assets/img/usa.jpg" style="width: 15%;"></a>
                     </ul>
                 </div>
             </div>
@@ -87,10 +107,10 @@
                     <!-- Banner Single Carousel Start -->
                     <div class="single-carousel-wrap slide-item-1" >
                         <div class="banner-caption text-center text-lg-left">
-                            <h4>TechSpace</h4>
-                            <h2>BLACK FRIDAY</h2>
-                            <h3>Iskoristite nevjerojatne popuste na mobitele i vrhunsku uslugu servisa u Tech Space-u!</h3>
-                            <a href="#" class="btn-long-arrow">Shop Now</a>
+                            <h4 class="translate">TechSpace</h4>
+                            <h2 class="translate">BLACK FRIDAY</h2>
+                            <h3 class="translate">Iskoristite nevjerojatne popuste na mobitele i vrhunsku uslugu servisa u Tech Space-u!</h3>
+                            <a  class="translate"href="#" class="btn-long-arrow">KUPI SADA</a>
                         </div>
                     </div>
                     <!-- Banner Single Carousel End -->
@@ -98,10 +118,10 @@
                     <!-- Banner Single Carousel Start -->
                     <div class="single-carousel-wrap slide-item-2">
                         <div class="banner-caption text-center text-lg-left">
-                            <h4>Discover New Camera Features</h4>
-                            <h2>New Apple Products Are Here</h2>
-                            <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
-                            <a href="#" class="btn-long-arrow">Shop Now</a>
+                            <h4 class="translate">Otkrij nove karakteristike kamere</h4>
+                            <h2 class="translate">Novi Apple proizvodi su tu!</h2>
+                            <p class="translate">Prepoznaj se u novom svijetlu na moderan i glamurozan način</p>
+                            <a class="translate" href="#" class="btn-long-arrow">KUPI SADA</a>
                         </div>
                     </div>
                     <!-- Banner Single Carousel End -->
@@ -119,7 +139,7 @@
             <div class="col-lg-6">
                 <!-- About Image Area Start -->
                 <div class="about-image-wrap">
-                    <a href="about.html"><img src="assets/img/about-img.png" alt="About Us" class="img-fluid"/></a>
+                    <a href="#"><img src="assets/img/about-img.png" alt="About Us" class="img-fluid"/></a>
                 </div>
                 <!-- About Image Area End -->
             </div>
@@ -127,21 +147,22 @@
             <div class="col-lg-6 m-auto">
                 <!-- About Text Area Start -->
                 <div class="about-content-wrap ml-0 ml-lg-5 mt-5 mt-lg-0">
-                    <h2>About Us</h2>
-                    <h3>WE ARE VISIONARY</h3>
+                    <h2 class="translate">Upoznajte nas</h2>
+                    <h3 class="translate">Mi smo vizionari</h3>
                     <div class="about-text">
-                        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum
-                            est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum
-                            formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc
-                            nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                        <p class="translate">Dobrodošli u TechSpace - vašu destinaciju za sve potrebe u svijetu tehnologije. U našem timu strastvenih entuzijasta, posvećeni smo pružanju vrhunskih proizvoda i usluga koji će unaprijediti vašu digitalnu interakciju. Sa našom stručnošću u mobilnim telefonima, računarima i servisima, težimo pružiti vrhunsko iskustvo svakom korisniku.
+                            Naša misija je olakšati vašu svakodnevnicu kroz inovativne tehnološke proizvode i pružiti vam podršku koja će vam omogućiti da iskoristite puni potencijal vaših uređaja. Kroz našu posvećenost kvalitetu i pouzdanosti, nastojimo biti vaš pouzdani partner u svim aspektima tehnološkog svijeta.
+                            Kontaktirajte nas danas kako bismo vam pomogli ostvariti vaše tehnološke ambicije i pružiti vam jedinstveno iskustvo koje se pamti.
+                            </p>
 
-                        <p>Typi noni habented claritatem insitamed ested usused legentis in iis qui facit eorum
-                            claritatem. Investigationes demonstraverunt lectores legere me lius quod ii loreem ipsum ius
-                            delour legunt saepius.</p>
+                        <p class="translate">Uz našu posvećenost kvalitetu i korisničko iskustvo, želimo vam pružiti ne samo proizvode i usluge, već i osjećaj povezanosti i povjerenja. Naš tim stručnjaka je uvijek tu da odgovori na vaša pitanja i pruži vam podršku koja vam je potrebna, čineći vaše iskustvo s tehnologijom glatkim i bezbrižnim.
+                            Vjerujemo u stvaranje zajednice koja cijeni tehnološki napredak, ali isto tako i ljudske veze. Naš cilj je pružiti vam ne samo proizvode, već i osjećaj pripadnosti TechSpace zajednici, gdje se vaše potrebe stavljaju na prvo mjesto.                          
+                            Hvala vam što ste dio naše priče. Radujemo se što ćemo vas upoznati i pružiti vam nezaboravno iskustvo s tehnologijom.
+                        </p>
 
-                        <a href="about.html" class="btn btn-long-arrow">Learn More</a>
+                        <a class="translate" href="#" class="btn btn-long-arrow">Saznaj više</a>
 
-                        <h4 class="vertical-text">WHO WE ARE?</h4>
+                        <h4 class="translate" class="vertical-text">KO SMO MI?</h4>
                     </div>
                 </div>
                 <!-- About Text Area End -->
@@ -158,8 +179,8 @@
             <div class="col-lg-12 text-center">
                 <!-- Section Title Start -->
                 <div class="section-title">
-                    <h2>New Collection Products</h2>
-                    <p>Best products on sale.</p>
+                    <h2 class="translate">Novi proizvodi kolekcije</h2>
+                    <p class="translate">Najbolji proizvodi na akciji</p>
                 </div>
                 <!-- Section Title End -->
             </div>
@@ -172,16 +193,8 @@
                     <!-- Tab Menu Area Start -->
                     <ul class="nav tab-menu-wrap" id="myTab" role="tablist">
                         <li class="nav-item">
-                            <a class="active" id="feature-products-tab" data-toggle="tab" href="#feature-products"
-                               role="tab" aria-controls="feature-products-tab" aria-selected="true">Feature Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="new-products-tab" data-toggle="tab" href="#new-products" role="tab"
-                               aria-controls="new-products" aria-selected="false">New Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="onsale-tab" data-toggle="tab" href="#onsale" role="tab" aria-controls="onsale"
-                               aria-selected="false">Onsale</a>
+                            <a  class="translate" class="active" id="feature-products-tab" data-toggle="tab" href="#feature-products"
+                               role="tab" aria-controls="feature-products-tab" aria-selected="true">Istaknuti proizvodi</a>
                         </li>
                     </ul>
                     <!-- Tab Menu Area End -->
@@ -200,10 +213,10 @@
                                         </figure>
 
                                         <div class="product-details">
-                                            <h2><a href="single-product.html">Samsung Galaxy S21</a></h2>
-                                           <p> Kupovinom Samsung Galaxy S21 i dobijate besplatne premium bežične slušalice </p>
+                                            <h2 class="translate"><a href="single-product.html">Samsung Galaxy S21</a></h2>
+                                           <p class="translate"> Kupovinom Samsung Galaxy S21 i dobijate besplatne premium bežične slušalice </p>
                                          
-                                           <a href="single-product.html" class="btn btn-add-to-cart">+ Add to Cart</a>
+                                           <a class="translate" href="single-product.html" class="btn btn-add-to-cart">+ Dodaj u korpu</a>
                                         
                                             
                                         </div>
@@ -229,10 +242,10 @@
                                         </figure>
 
                                         <div class="product-details">
-                                            <h2><a href="single-product.html">iPhone 13</a></h2>
-                                           <p> Uz iPhone 13 dobivate popust od 20% na drugi telefon iz našeg asortimana!</p>
+                                            <h2 class="translate"><a href="single-product.html">iPhone 13</a></h2>
+                                           <p class="translate"> Uz iPhone 13 dobivate popust od 20% na drugi telefon iz našeg asortimana!</p>
                         
-                                            <a href="single-product.html" class="btn btn-add-to-cart">+ Add to Cart</a>
+                                            <a class="translate"href="single-product.html" class="btn btn-add-to-cart">+ Dodaj u korpu</a>
                                         </div>
 
                                         <div class="product-meta">
@@ -256,10 +269,10 @@
                                         </figure>
 
                                         <div class="product-details">
-                                            <h2><a href="single-product.html">OnePlus 9 Pro</a></h2>
-                                          <p> Kupite OnePlus 9 Pro i osvojite besplatan dodatni punjač brze punjenja!</p>
+                                            <h2 class="translate"><a href="single-product.html">OnePlus 9 Pro</a></h2>
+                                          <p class="translate"> Kupite OnePlus 9 Pro i osvojite besplatan dodatni punjač brze punjenja!</p>
                                            
-                                            <a href="single-product.html" class="btn btn-add-to-cart">+ Add to Cart</a>
+                                            <a class="translate" href="single-product.html" class="btn btn-add-to-cart">+ Dodaj u korpu</a>
                                         </div>
 
                                         <div class="product-meta">
@@ -283,9 +296,9 @@
                                         </figure>
 
                                         <div class="product-details">
-                                            <h2><a href="single-product.html">Xiaomi Mi 11 Lite</a></h2>
-                                          <p> Uz kupovinu Xiaomi Mi 11 Lite dobivate 30% popusta na futrolu i zaštitno staklo!</p>
-                                          <a href="single-product.html" class="btn btn-add-to-cart">+ Add to Cart</a>
+                                            <h2 class="translate"><a href="single-product.html">Xiaomi Mi 11 Lite</a></h2>
+                                          <p class="translate"> Uz kupovinu Xiaomi Mi 11 Lite dobivate 30% popusta na futrolu i zaštitno staklo!</p>
+                                          <a class="translate" href="single-product.html" class="btn btn-add-to-cart">+ Dodaj u korpu</a>
                                            
                                         </div>
 
@@ -308,10 +321,10 @@
                                         </figure>
 
                                         <div class="product-details">
-                                            <h2><a href="single-product.html">Realme GT Master Edition</a></h2>
-                                          <p>Uz Realme GT Master Edition dobivate besplatan set sportskih Bluetooth slušalica! </p>
+                                            <h2 class="translate"><a href="single-product.html">Realme GT Master Edition</a></h2>
+                                          <p class="translate">Uz Realme GT Master Edition dobivate besplatan set sportskih Bluetooth slušalica! </p>
                                       
-                                            <a href="single-product.html" class="btn btn-add-to-cart">+ Add to Cart</a>
+                                            <a class="translate" href="single-product.html" class="btn btn-add-to-cart">+ Dodaj u korpu</a>
                                         </div>
 
                                         <div class="product-meta">
@@ -333,10 +346,10 @@
                                         </figure>
 
                                         <div class="product-details">
-                                            <h2><a href="single-product.html">Realme GT Master Edition</a></h2>
-                                          <p>Kupite Google Pixel 6 i dobijte poklon bon za aplikacije u vrijednosti od 100 KM! </p>
+                                            <h2 class="translate"><a href="single-product.html">Google Pixel 6a</a></h2>
+                                          <p class="translate">Kupite Google Pixel 6 i dobijte poklon bon za aplikacije u vrijednosti od 100 KM! </p>
                                          
-                                            <a href="single-product.html" class="btn btn-add-to-cart">+ Add to Cart</a>
+                                            <a class="translate" href="single-product.html" class="btn btn-add-to-cart">+ Dodaj u korpu</a>
                                         </div>
                                            
                                         <div class="product-meta">
@@ -352,290 +365,6 @@
                                     </div>
 
 
-                                    <!-- Single Product Item -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="new-products" role="tabpanel" aria-labelledby="new-products-tab">
-                            <div class="products-wrapper">
-                                <div class="products-carousel owl-carousel">
-                                    <!-- Single Product Item -->
-                                    <div class="single-product-item text-center">
-                                        <figure class="product-thumb">
-                                            <a href="single-product.html"><img src="assets/img/new-product-1.jpg"
-                                                                               alt="Products" class="img-fluid"></a>
-                                        </figure>
-
-                                        <div class="product-details">
-                                            <h2><a href="single-product.html">Crown Summit Backpack</a></h2>
-                                            <div class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star-half"></i>
-                                                <i class="fa fa-star-o"></i>
-                                            </div>
-                                            <span class="price">$52.00</span>
-                                            <a href="single-product.html" class="btn btn-add-to-cart">+ Add to Cart</a>
-                                            <span class="product-bedge">New</span>
-                                        </div>
-
-                                        <div class="product-meta">
-                                            <button type="button" data-toggle="modal" data-target="#quickView">
-                                                <span data-toggle="tooltip" data-placement="left" title="Quick View"><i
-                                                        class="fa fa-compress"></i></span>
-                                            </button>
-                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left"
-                                               title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="compare.html" data-toggle="tooltip" data-placement="left"
-                                               title="Compare"><i class="fa fa-tags"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Single Product Item -->
-
-                                    <!-- Single Product Item -->
-                                    <div class="single-product-item text-center">
-                                        <figure class="product-thumb">
-                                            <a href="single-product.html"><img src="assets/img/new-product-2.jpg"
-                                                                               alt="Products" class="img-fluid"></a>
-                                        </figure>
-
-                                        <div class="product-details">
-                                            <h2><a href="single-product.html">Bruno Compete Hoodie</a></h2>
-                                            <div class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star-o"></i>
-                                            </div>
-                                            <span class="price">$152.00</span>
-                                            <a href="single-product.html" class="btn btn-add-to-cart">+ Add to Cart</a>
-                                            <span class="product-bedge">New</span>
-                                        </div>
-
-                                        <div class="product-meta">
-                                            <button type="button" data-toggle="modal" data-target="#quickView">
-                                                <span data-toggle="tooltip" data-placement="left" title="Quick View"><i
-                                                        class="fa fa-compress"></i></span>
-                                            </button>
-                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left"
-                                               title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="compare.html" data-toggle="tooltip" data-placement="left"
-                                               title="Compare"><i class="fa fa-tags"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Single Product Item -->
-
-                                    <!-- Single Product Item -->
-                                    <div class="single-product-item text-center">
-                                        <figure class="product-thumb">
-                                            <a href="single-product.html"><img src="assets/img/new-product-3.jpg"
-                                                                               alt="Products" class="img-fluid"></a>
-                                        </figure>
-
-                                        <div class="product-details">
-                                            <h2><a href="single-product.html">MH01-Black</a></h2>
-                                            <div class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <span class="price">$43.00</span>
-                                            <a href="single-product.html" class="btn btn-add-to-cart">+ Add to Cart</a>
-                                            <span class="product-bedge">New</span>
-                                        </div>
-
-                                        <div class="product-meta">
-                                            <button type="button" data-toggle="modal" data-target="#quickView">
-                                                <span data-toggle="tooltip" data-placement="left" title="Quick View"><i
-                                                        class="fa fa-compress"></i></span>
-                                            </button>
-                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left"
-                                               title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="compare.html" data-toggle="tooltip" data-placement="left"
-                                               title="Compare"><i class="fa fa-tags"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Single Product Item -->
-
-                                    <!-- Single Product Item -->
-                                    <div class="single-product-item text-center">
-                                        <figure class="product-thumb">
-                                            <a href="single-product.html"><img src="assets/img/new-product-4.jpg"
-                                                                               alt="Products" class="img-fluid"></a>
-                                        </figure>
-
-                                        <div class="product-details">
-                                            <h2><a href="single-product.html">Chaz Kangeroo Hoodie</a></h2>
-                                            <div class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star-half"></i>
-                                            </div>
-                                            <span class="price">$83.00</span>
-                                            <a href="single-product.html" class="btn btn-add-to-cart">+ Add to Cart</a>
-                                            <span class="product-bedge sale">Sale</span>
-                                        </div>
-
-                                        <div class="product-meta">
-                                            <button type="button" data-toggle="modal" data-target="#quickView">
-                                                <span data-toggle="tooltip" data-placement="left" title="Quick View"><i
-                                                        class="fa fa-compress"></i></span>
-                                            </button>
-                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left"
-                                               title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="compare.html" data-toggle="tooltip" data-placement="left"
-                                               title="Compare"><i class="fa fa-tags"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Single Product Item -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="onsale" role="tabpanel" aria-labelledby="onsale-tab">
-                            <div class="products-wrapper">
-                                <div class="products-carousel owl-carousel">
-                                    <!-- Single Product Item -->
-                                    <div class="single-product-item text-center">
-                                        <figure class="product-thumb">
-                                            <a href="single-product.html"><img src="assets/img/sale-product-1.jpg"
-                                                                               alt="Products" class="img-fluid"></a>
-                                        </figure>
-
-                                        <div class="product-details">
-                                            <h2><a href="single-product.html">Crown Summit Backpack</a></h2>
-                                            <div class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star-half"></i>
-                                                <i class="fa fa-star-o"></i>
-                                            </div>
-                                            <span class="price">$52.00</span>
-                                            <a href="single-product.html" class="btn btn-add-to-cart">+ Add to Cart</a>
-                                            <span class="product-bedge sale">Sale</span>
-                                        </div>
-
-                                        <div class="product-meta">
-                                            <button type="button" data-toggle="modal" data-target="#quickView">
-                                                <span data-toggle="tooltip" data-placement="left" title="Quick View"><i
-                                                        class="fa fa-compress"></i></span>
-                                            </button>
-                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left"
-                                               title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="compare.html" data-toggle="tooltip" data-placement="left"
-                                               title="Compare"><i class="fa fa-tags"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Single Product Item -->
-
-                                    <!-- Single Product Item -->
-                                    <div class="single-product-item text-center">
-                                        <figure class="product-thumb">
-                                            <a href="single-product.html"><img src="assets/img/sale-product-2.jpg"
-                                                                               alt="Products" class="img-fluid"></a>
-                                        </figure>
-
-                                        <div class="product-details">
-                                            <h2><a href="single-product.html">Bruno Compete Hoodie</a></h2>
-                                            <div class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star-o"></i>
-                                            </div>
-                                            <span class="price">$152.00</span>
-                                            <a href="single-product.html" class="btn btn-add-to-cart">+ Add to Cart</a>
-                                            <span class="product-bedge sale">Sale</span>
-                                        </div>
-
-                                        <div class="product-meta">
-                                            <button type="button" data-toggle="modal" data-target="#quickView">
-                                                <span data-toggle="tooltip" data-placement="left" title="Quick View"><i
-                                                        class="fa fa-compress"></i></span>
-                                            </button>
-                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left"
-                                               title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="compare.html" data-toggle="tooltip" data-placement="left"
-                                               title="Compare"><i class="fa fa-tags"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Single Product Item -->
-
-                                    <!-- Single Product Item -->
-                                    <div class="single-product-item text-center">
-                                        <figure class="product-thumb">
-                                            <a href="single-product.html"><img src="assets/img/product-3.jpg"
-                                                                               alt="Products" class="img-fluid"></a>
-                                        </figure>
-
-                                        <div class="product-details">
-                                            <h2><a href="single-product.html">MH01-Black</a></h2>
-                                            <div class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <span class="price">$43.00</span>
-                                            <a href="single-product.html" class="btn btn-add-to-cart">+ Add to Cart</a>
-                                            <span class="product-bedge sale">Sale</span>
-                                        </div>
-
-                                        <div class="product-meta">
-                                            <button type="button" data-toggle="modal" data-target="#quickView">
-                                                <span data-toggle="tooltip" data-placement="left" title="Quick View"><i
-                                                        class="fa fa-compress"></i></span>
-                                            </button>
-                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left"
-                                               title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="compare.html" data-toggle="tooltip" data-placement="left"
-                                               title="Compare"><i class="fa fa-tags"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Single Product Item -->
-
-                                    <!-- Single Product Item -->
-                                    <div class="single-product-item text-center">
-                                        <figure class="product-thumb">
-                                            <a href="single-product.html"><img src="assets/img/new-product-4.jpg"
-                                                                               alt="Products" class="img-fluid"></a>
-                                        </figure>
-
-                                        <div class="product-details">
-                                            <h2><a href="single-product.html">Chaz Kangeroo Hoodie</a></h2>
-                                            <div class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star-half"></i>
-                                            </div>
-                                            <span class="price">$83.00</span>
-                                            <a href="single-product.html" class="btn btn-add-to-cart">+ Add to Cart</a>
-                                            <span class="product-bedge sale">Sale</span>
-                                        </div>
-
-                                        <div class="product-meta">
-                                            <button type="button" data-toggle="modal" data-target="#quickView">
-                                                <span data-toggle="tooltip" data-placement="left" title="Quick View"><i
-                                                        class="fa fa-compress"></i></span>
-                                            </button>
-                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left"
-                                               title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="compare.html" data-toggle="tooltip" data-placement="left"
-                                               title="Compare"><i class="fa fa-tags"></i></a>
-                                        </div>
-                                    </div>
                                     <!-- Single Product Item -->
                                 </div>
                             </div>
@@ -694,7 +423,7 @@
                                                      class="img-fluid"/></a>
 
                                     <figcaption class="category-name">
-                                        <a href="#">SERVICES</a>
+                                        <a class="translate" href="#">SERVIS</a>
                                     </figcaption>
                                 </figure>
                             </div>
@@ -707,7 +436,7 @@
                                                      class="img-fluid"/></a>
 
                                     <figcaption class="category-name">
-                                        <a href="#">ACCESSORIES</a>
+                                        <a class="translate" href="#">DODACI</a>
                                     </figcaption>
                                 </figure>
                             </div>
@@ -720,7 +449,7 @@
                                                      class="img-fluid"/></a>
 
                                     <figcaption class="category-name">
-                                        <a href="#">SMART WATCHES</a>
+                                        <a class="translate" href="#">SMART SATOVI</a>
                                     </figcaption>
                                 </figure>
                             </div>
@@ -733,7 +462,7 @@
                                                      class="img-fluid"/></a>
 
                                     <figcaption class="category-name">
-                                        <a href="#">SPEAKERS</a>
+                                        <a class="translate" href="#">ZVUČNICI</a>
                                     </figcaption>
                                 </figure>
                             </div>
@@ -754,8 +483,8 @@
                 <div class="col-lg-12 text-center">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h2>What People Say</h2>
-                        <p>Testimonials</p>
+                        <h2 class="translate">Šta drugi kažu?</h2>
+                        <p class="translate">Izjave</p>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -766,30 +495,22 @@
                     <div class="testimonial-content-wrap">
                         <div id="testimonialCarousel" class="owl-carousel">
                             <div class="single-testimonial-item">
-                                <p>These guys have been absolutely outstanding. When I needed them they came through in
-                                    a big way! I know that if you buy this theme, you'll get the one thing we all look
-                                    for when we buy on Themeforest, and that's real support for the craziest of
-                                    requests!</p>
+                                <p class="translate">Radnici su bili apsolutno izvanredni. Kad su mi trebali, uvijek su bili tu za mene.
+                                    Od sada kupujemo samo u TechSpace-u jer tu dobijamo podršku i usluge kakve svaka mušterija zaslužuje!</p>
 
                                 <h3 class="client-name">Luis Manrata</h3>
                                 <span class="client-email">mantrexxx@email.here</span>
                             </div>
 
                             <div class="single-testimonial-item">
-                                <p>These guys have been absolutely outstanding. When I needed them they came through in
-                                    a big way! I know that if you buy this theme, you'll get the one thing we all look
-                                    for when we buy on Themeforest, and that's real support for the craziest of
-                                    requests!</p>
+                                <p class="translate">Stvarno sve pohvale za ovu ekipu ljudi! Najbolje usluge u gradu!!!</p>
 
                                 <h3 class="client-name">John Dibba</h3>
                                 <span class="client-email">dibba34@email.here</span>
                             </div>
 
                             <div class="single-testimonial-item">
-                                <p>These guys have been absolutely outstanding. When I needed them they came through in
-                                    a big way! I know that if you buy this theme, you'll get the one thing we all look
-                                    for when we buy on Themeforest, and that's real support for the craziest of
-                                    requests!</p>
+                                <p class="translate">Sve što vam je potrebno možete naći u TechSpace-u. To mogu garantovati :)</p>
 
                                 <h3 class="client-name">Alex Tuntuni</h3>
                                 <span class="client-email">mantrataalex@email.here</span>
@@ -817,8 +538,8 @@
                                 <img src="assets/img/air-plane.png" alt="WorldWide Shipping"/>
                             </figure>
                             <div class="callto-info">
-                                <h2>Free Shipping Worldwide</h2>
-                                <p>On order over $150 - 7 days a week</p>
+                                <h2 class="translate">Besplatna dostava širom svijeta</h2>
+                                <p class="translate">Za sve narudžbe preko 100KM - 7 dana sedmično</p>
                             </div>
                         </div>
                         <!-- Single Call-to Action End -->
@@ -831,8 +552,8 @@
                                 <img src="assets/img/support.png" alt="Support"/>
                             </figure>
                             <div class="callto-info">
-                                <h2>24/7 CUSTOMER SERVICE</h2>
-                                <p>Call us 24/7 at 000 - 123 - 456k</p>
+                                <h2 class="translate">24/7 SMO TU ZA VAS</h2>
+                                <p class="translate">Pozovite nas na broj 000 - 123 - 456k</p>
                             </div>
                         </div>
                         <!-- Single Call-to Action End -->
@@ -845,8 +566,8 @@
                                 <img src="assets/img/money-back.png" alt="Money Back"/>
                             </figure>
                             <div class="callto-info">
-                                <h2>MONEY BACK Guarantee!</h2>
-                                <p>Send within 30 days</p>
+                                <h2 class="translate">Garantovan povrat novca!</h2>
+                                <p class="translate">Slanje u roku od 30 dana</p>
                             </div>
                         </div>
                         <!-- Single Call-to Action End -->
@@ -859,8 +580,8 @@
                                 <img src="assets/img/cog.png" alt="Guide"/>
                             </figure>
                             <div class="callto-info">
-                                <h2>SHOPPING GUIDE</h2>
-                                <p>Quis Eum Iure Reprehenderit</p>
+                                <h2 class="translate">Vodič pri kupovini</h2>
+                                <p class="translate">Potrebna pomoć? Ne brinite, tu je i priručnik :)</p>
                             </div>
                         </div>
                         <!-- Single Call-to Action End -->
@@ -872,7 +593,7 @@
     <!-- Footer Call to Action End -->
 
     <div class="visitCounter">
-          <p> BROJAČ POSJETA </p>
+          <p class="translate"> BROJAČ POSJETA </p>
           <h1 id="count"> 0 </h1>
         </span>
       </div>
@@ -886,7 +607,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="follow-content-wrap">
-                            <h3>Mapa poslovnica</h3>
+                            <h1 class="translate" style="color: white;">Mapa naših poslovnica</h1>
     <div id="map">
         <iframe src="https://www.google.com.qa/maps/d/u/0/embed?mid=18tSQ43duCDwPq3SYTDXcTrF1V-HiHx8&hl=en&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
 

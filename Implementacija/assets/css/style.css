@@ -41,6 +41,8 @@ Version: 1.0.0
    29.  Footer Area Start
 -------------------------------------------------------------------*/
 /*== Theme Typography Style Start ==*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 html {
     font-size: 62.5%;
 }
@@ -191,7 +193,7 @@ button:focus, button:active, button.btn:focus, button.btn:active {
 
 .section-title p {
     font-style: italic;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     font-size: 1.5rem;
     line-height: 1.5;
     margin: 0;
@@ -463,7 +465,7 @@ button:focus, button:active, button.btn:focus, button.btn:active {
 }
 
 .breadcrumb li a {
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     color: #f4f5f7;
     font-size: 1.5rem;
     font-style: italic;
@@ -489,7 +491,7 @@ button:focus, button:active, button.btn:focus, button.btn:active {
 .sidebar-list li a {
     color: #3839AF;
     font-style: italic;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     -webkit-transition: all 0.1s ease-out;
     -moz-transition: all 0.1s ease-out;
     -o-transition: all 0.1s ease-out;
@@ -643,7 +645,7 @@ blockquote, .blockquote {
     font-size: 1.5rem;
     line-height: 30px;
     color: #3839AF;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     font-weight: 700;
     font-style: italic;
     padding: 100px 30px 30px;
@@ -832,7 +834,7 @@ address strong, address b {
 #header-area .site-settings dl {
     white-space: nowrap;
     margin: 0 20px 0;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
 }
 
 @media only screen and (min-width: 320px) and (max-width: 575px) {
@@ -1184,7 +1186,7 @@ address strong, address b {
     font-size: 1.3rem;
     font-weight: 700;
     font-style: italic;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     letter-spacing: 0.8px;
     padding: 6px 20px;
     text-transform: capitalize;
@@ -1272,7 +1274,7 @@ address strong, address b {
     color: #727272;
     font-weight: 400;
     font-size: 1.3rem;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     font-style: italic;
     font-weight: 700;
     text-transform: capitalize;
@@ -1588,7 +1590,7 @@ address strong, address b {
 
 #banner-area #banner-carousel .single-carousel-wrap .banner-caption p {
     font-style: italic;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     color: #000;
 }
 
@@ -1720,7 +1722,7 @@ address strong, address b {
 }
 
 .about-content-wrap {
-    font-family: "Droid Serif";
+    font-family: "Poppins";
 }
 
 .about-content-wrap h2, .about-content-wrap h3, .about-content-wrap h4 {
@@ -2000,7 +2002,7 @@ address strong, address b {
     font-style: italic;
     font-size: 1.5rem;
     line-height: 1.5;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
 }
 
 .products-wrapper .single-product-item .product-details span {
@@ -2075,7 +2077,7 @@ address strong, address b {
     color: #fff;
     padding: 10px 25px;
     text-transform: uppercase;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -2513,7 +2515,7 @@ address strong, address b {
 .testimonial-content-wrap .single-testimonial-item {
     font-style: italic;
     color: #d2d2d2;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     line-height: 30px;
 }
 
@@ -2645,7 +2647,7 @@ address strong, address b {
 }
 
 #sale-products-area .sale-product-wrapper .single-sale-product .sale-product-details p {
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     font-style: italic;
 }
 
@@ -2697,7 +2699,7 @@ address strong, address b {
     display: block;
     text-align: center;
     font-weight: 700;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     color: #3839AF;
     position: relative;
     line-height: 70px;
@@ -3100,7 +3102,7 @@ address strong, address b {
 }
 
 .shopping-option h3 {
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     font-size: 2rem;
     line-height: 1.5;
     font-weight: 400;
@@ -3309,7 +3311,7 @@ address strong, address b {
 }
 
 .shop-page-content-wrap .products-settings-option .show-items {
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     font-size: 1.6rem;
 }
 
@@ -3398,7 +3400,7 @@ address strong, address b {
 .single-product-page-content .product-details .product-info-stock-sku {
     text-transform: uppercase;
     font-weight: 700;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     font-size: 1.6rem;
     line-height: 1.5;
     margin-bottom: 12px;
@@ -3411,7 +3413,7 @@ address strong, address b {
 .single-product-page-content .product-details .products-desc {
     font-size: 1.5rem;
     line-height: 1.5;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
 }
 
 .single-product-page-content .product-details .shopping-option-item {
@@ -3419,7 +3421,7 @@ address strong, address b {
 }
 
 .single-product-page-content .product-details .shopping-option-item h4 {
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     color: #727272;
     margin-bottom: 15px;
     font-size: 1.6rem;
@@ -3430,7 +3432,7 @@ address strong, address b {
 }
 
 .single-product-page-content .product-details .product-quantity .quantity-field label {
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     color: #727272;
     margin-bottom: 15px;
     font-size: 1.6rem;
@@ -3497,7 +3499,7 @@ address strong, address b {
     text-transform: uppercase;
     font-size: 1.4rem;
     line-height: 1.5;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     font-weight: 700;
 }
 
@@ -3509,7 +3511,7 @@ address strong, address b {
 .single-product-page-content .product-full-info-reviews .tab-content {
     font-size: 1.5rem;
     line-height: 1.5;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     border: 1px solid #c5c5c5;
     padding: 30px;
 }
@@ -3741,7 +3743,7 @@ address strong, address b {
     line-height: 1.5;
     font-weight: 700;
     color: #3839AF;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     margin-right: 50px;
     position: relative;
 }
@@ -4185,7 +4187,7 @@ fieldset legend {
     margin: 0 0 30px;
     padding: 15px 20px;
     position: relative;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     text-transform: capitalize;
 }
 
@@ -4525,7 +4527,7 @@ fieldset legend {
 }
 
 .single-blog-wrap .blog-details p {
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     font-style: italic;
 }
 
@@ -4536,7 +4538,7 @@ fieldset legend {
 }
 
 .post-meta h2 {
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     font-size: 3.2rem;
     line-height: 1.5;
     margin-bottom: 7px;
@@ -4625,7 +4627,7 @@ fieldset legend {
 }
 
 .comment-single-item h2 {
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     font-size: 2.8rem;
     line-height: 1.5;
     margin-bottom: 25px;
@@ -4943,7 +4945,7 @@ fieldset legend {
 
 .error-page-content-wrap h2 {
     font-size: 10rem;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
     animation: swing 0.5s 0.5s forwards;
     margin-top: -24px;
@@ -5006,7 +5008,7 @@ fieldset legend {
 
 .single-callto-action {
     font-style: italic;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     border-right: 1px dashed #d2d2d2;
     padding: 10px 0;
     align-items: center;
@@ -5058,7 +5060,7 @@ fieldset legend {
 }
 
 .follow-content-wrap {
-    font-family: "Droid Serif";
+    font-family: "Poppins";
     font-style: italic;
     font-size: 1.5rem;
     line-height: 1.5;
@@ -5149,7 +5151,7 @@ fieldset legend {
 
 .copyright-area .copyright-text {
     font-style: italic;
-    font-family: "Droid Serif";
+    font-family: "Poppins";
 }
 
 .copyright-area .copyright-text * {
